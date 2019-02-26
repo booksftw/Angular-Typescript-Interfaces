@@ -11,7 +11,6 @@ export class AppComponent implements OnInit {
 
   ourCust: ourInterfaces.Customer;
   ourAnimal: ourInterfaces.Animal;
-  allObjs: {any}[];
 
   ngOnInit() {
     const ourCust = this.ourCust = {
@@ -25,14 +24,7 @@ export class AppComponent implements OnInit {
       name: 'Sir Cuddles',
       hungerLevel: 200000000
     };
-
-    const ourObjs = [ourCust, ourAnimal];
-    this.ourCustomRender(ourObjs);
   }
 
-  ourCustomRender(ourObjs) {
-    this.allObjs = ourObjs;
-    console.log(this.allObjs, ' all page objs');
-  }
 
 }
